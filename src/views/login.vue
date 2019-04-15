@@ -51,7 +51,7 @@
         if (res.data.status === 201) {
           console.log(res.data.data.token, 'token信息')
           setToken(res.data.data.token)
-          this.$router.push('/home')
+          this.$router.push('/layout')
         } else {
           // Toast.fail('用户名或密码错误！') 必须下面的写法才生效。不然就得在单独引入然后use一次指令组件才可以这样使用
           this.$toast.fail('用户名或密码错误！')

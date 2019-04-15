@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Layout from './views/layout.vue'
 import Login from './views/login.vue'
 
 Vue.use(Router)
 
 const pageRoutes = [
   {
-    path: '/commercialCustomer',
-    name: 'CommercialCustomer',
-    component: () => import('@/views/commercialCustomer')
+    path: '/home',
+    name: 'home',
+    component: () => import('@/views/home')
   },
   {
-    path: '/channelPartner',
-    name: 'ChannelPartner',
-    component: () => import('@/views/channelPartner')
+    path: '/preference',
+    name: 'preference',
+    component: () => import('@/views/preference')
   }
 ]
 
@@ -22,7 +22,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
+      name: 'index',
       component: Login,
       redirect: '/login'
     },
@@ -32,14 +32,14 @@ export default new Router({
       component: Login
     },
     {
-      path: '/home',
-      name: 'Home',
-      component: Home,
-      redirect: '/commercialCustomer',
+      path: '/layout',
+      name: 'layout',
+      component: Layout,
+      redirect: '/home',
       children: pageRoutes
-    },
-    {
-      path: '/home2'
     }
+    // {
+    //   path: '/home2'
+    // }
   ]
 })

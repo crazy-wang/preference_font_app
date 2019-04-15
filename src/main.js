@@ -9,6 +9,9 @@ import './utils/rem' // 重要的rem文件；动态设置html根元素来保证�
 import Vant from 'vant'
 import 'vant/lib/index.css'
 
+// 引入iconfont
+import './styles/iconfont.css'
+
 // 引入vue-echarts
 import Echarts from 'echarts'
 import ECharts from 'vue-echarts'

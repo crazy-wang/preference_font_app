@@ -4,18 +4,20 @@
     <!--<keep-alive>-->
       <router-view></router-view>
     <!--</keep-alive>-->
-
+    <footer-nav></footer-nav>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import headNav from '@/components/headNav'
+import footerNav from '@/components/footerNav'
 
 export default {
-  name: 'home',
+  name: 'layout',
   components: {
-    headNav
+    headNav,
+    footerNav
   }
 }
 </script>
