@@ -53,6 +53,7 @@
     position: fixed;
     bottom: 0;
     width: 375px;
+    border-top: 1px solid #333;
   }
 
   .footer-nav {
@@ -60,7 +61,7 @@
     height: 54px;
     display: flex;
     justify-content: space-around;
-    background-color: #000;
+    background-color: #f2f3f5;
     font-size: 12px;
     font-weight: bold;
     color: #7C8694;
@@ -75,7 +76,7 @@
       }
     }
     .active-item {
-      color: #FF5B00;
+      color: #1989fa;
     }
   }
 </style>
