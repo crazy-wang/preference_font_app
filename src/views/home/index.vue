@@ -1,7 +1,12 @@
 <template>
     <div class="home">
       <div class="newsletter" v-for="(item, index) in newsletters" :key="index">
-        <van-panel :title="item.title" :desc="item.desc" :status="item.status">
+        <van-panel :title="item.title" :status="item.status">
+          <div slot="header" class="newsletter-header">
+            <span class="status">{{item.status}}</span>
+            <div class="title">{{item.title}}</div>
+            <div class="desc">{{item.desc}}</div>
+          </div>
           <div class="newsletter-content">
             <img :src="item.imgUrl" class="newsletter-img">
           </div>
@@ -46,8 +51,8 @@
                   releaseTime: '2小时前'
                 },
                 {
-                  title: '联想2019誓师大会即将举行',
-                  desc: '北京时间2019-04-19联想将在国家钻石球场举行新财年誓师大会',
+                  title: '联想2019誓师大会即将举行,联想2019誓师大会即将举行',
+                  desc: '北京时间2019-04-19联想将在国家钻石球场举行新财年誓师大会,北京时间2019-04-19联想誓师大会',
                   status: '火',
                   imgUrl: './img/demo1.png',
                   tips: '已关注',
@@ -65,6 +70,28 @@
 .newsletter {
   margin-top: 10px;
   margin-bottom: 20px;
+  .newsletter-header {
+    position: relative;
+    font-size: 14px;
+    overflow: hidden;
+    color: #323233;
+    line-height: 24px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ebedf0;
+    margin-bottom: 5px;
+    .status {
+      color: #f44;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+    .desc {
+      color: #969799;
+      font-size: 12px;
+      margin-top: 3px;
+      line-height: 18px;
+    }
+  }
   .newsletter-content {
     .newsletter-img {
       width: 375px;

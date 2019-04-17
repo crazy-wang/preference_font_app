@@ -1,0 +1,9 @@
+// 更改panel组件样式用于home页
+.van-panel {
+  .van-cell {
+    padding-bottom:0;
+  }
+  .van-cell:not(:last-child)::after {
+    border: none;
+  }
+}
