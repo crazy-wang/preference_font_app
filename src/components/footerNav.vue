@@ -19,12 +19,12 @@
           {
             className: 'iconxiazai45',
             desc: '首页',
-            url: '/home'
+            url: '/home/index'
           },
           {
             className: 'iconxiazai45',
             desc: '偏好',
-            url: '/preference'
+            url: '/preference/index'
           },
           {
             className: 'iconxiazai45',

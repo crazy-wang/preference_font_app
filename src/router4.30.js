@@ -59,19 +59,6 @@ export default new Router({
         {
           path: 'articleDetail',
           name: 'articleDetail',
-          component: () => import('@/views/home/components/articleDetail')
-        }
-      ]
-    },
-    {
-      path: '/preference',
-      name: 'preference',
-      // component: () => import('@/views/home'),
-      component: Layout,
-      children: [
-        {
-          path: 'index',
-          name: 'preferenceIndex',
           component: () => import('@/views/preference')
         }
       ]

@@ -7,3 +7,26 @@
     border: none;
   }
 }
+
+// home首页顶部搜索框样式
+.home {
+  .top-search {
+    .van-cell {
+      background-color: #1989fa;
+      color: #fff;
+      .van-icon-search {
+        font-size: 20px;
+        position: relative;
+        top: 1px;
+      }
+      .van-field__body {
+        .van-field__control {
+          background: #fff;
+          padding: 2px 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+  }
+}
