@@ -3,26 +3,28 @@
     <div class="top-search">
       <van-field left-icon="search" v-model="searchValue" placeholder="搜索用户、学校、使馆教育处、公司及其他内容" />
     </div>
-    <div class="newsletter" v-for="(item, index) in newsletters" :key="index" @click="goArticleDetail">
-      <van-panel :title="item.title" :status="item.status">
-        <div slot="header" class="newsletter-header">
-          <span class="status">{{item.status}}</span>
-          <div class="title">{{item.title}}</div>
-          <div class="desc">{{item.desc}}</div>
-        </div>
-        <div class="newsletter-content">
-          <img :src="item.imgUrl" class="newsletter-img">
-        </div>
-        <div slot="footer" class="newsletter-footer">
-          <div class="footer-left">
-            <span class="tips">{{item.tips}}</span>
-            <span class="author">{{item.author}}</span>
-            <span class="comment-num">{{item.commentNum}}评论</span>
-            <span class="release-time">{{item.releaseTime}}</span>
+    <div class="main-content">
+      <div class="newsletter" v-for="(item, index) in newsletters" :key="index" @click="goArticleDetail">
+        <van-panel :title="item.title" :status="item.status">
+          <div slot="header" class="newsletter-header">
+            <span class="status">{{item.status}}</span>
+            <div class="title">{{item.title}}</div>
+            <div class="desc">{{item.desc}}</div>
           </div>
-          <van-icon class="van-icon-close"/>
-        </div>
-      </van-panel>
+          <div class="newsletter-content">
+            <img :src="item.imgUrl" class="newsletter-img">
+          </div>
+          <div slot="footer" class="newsletter-footer">
+            <div class="footer-left">
+              <span class="tips">{{item.tips}}</span>
+              <span class="author">{{item.author}}</span>
+              <span class="comment-num">{{item.commentNum}}评论</span>
+              <span class="release-time">{{item.releaseTime}}</span>
+            </div>
+            <van-icon class="van-icon-close"/>
+          </div>
+        </van-panel>
+      </div>
     </div>
   </div>
 </template>
@@ -85,8 +87,10 @@
     height: 50px;
     background-color: #f2f3f5;
   }
-  .newsletter {
+  .main-content {
     margin-top: 50px;
+  }
+  .newsletter {
     margin-bottom: 20px;
     .newsletter-header {
       position: relative;

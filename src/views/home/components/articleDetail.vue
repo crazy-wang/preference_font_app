@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="news-content">
-          <p v-for="n in  20">{{n}}时光是万物的秤，帮我们称出了人心的重量。。。</p>
+          <p v-for="n in  20">{{n}}时光是万物的秤，帮我们大家称出了人心的重量啊啊。。。</p>
         </div>
       </div>
       <div class="main-comment">
@@ -38,20 +38,69 @@
           </div>
           <div class="comment-item-right">
             <div class="comment-item-right-top">
-              <span class="user-name"></span>
-              <span class="user-status"></span>
+              <span class="user-name">俺有小果果吃</span>
+              <span class="user-status"> <i class="iconfont iconlike"></i>赞 </span>
             </div>
             <div class="comment-item-right-content">
               <p>有点常识行吗</p>
             </div>
             <div class="comment-item-right-bottom">
-              <span>05-01 12:23</span> <span>回复</span>
+              <span>05-01 12:23</span> <span style="margin-left: 10px;">回复</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-item-left">
+            <img src="../../../../public/img/demo1.png" alt="">
+          </div>
+          <div class="comment-item-right">
+            <div class="comment-item-right-top">
+              <span class="user-name">俺有小果果吃</span>
+              <span class="user-status"> <i class="iconfont iconlike"></i>赞 </span>
+            </div>
+            <div class="comment-item-right-content">
+              <p>我是用来测试的，嘻嘻哈哈，有时找我就好了好不i的顾客卡夫卡的看见对方肯德基访</p>
+            </div>
+            <div class="comment-item-right-bottom">
+              <span>05-01 12:23</span> <span style="margin-left: 10px;">回复</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-item-left">
+            <img src="../../../../public/img/demo1.png" alt="">
+          </div>
+          <div class="comment-item-right">
+            <div class="comment-item-right-top">
+              <span class="user-name">俺有小果果吃</span>
+              <span class="user-status"> <i class="iconfont iconlike"></i>赞 </span>
+            </div>
+            <div class="comment-item-right-content">
+              <p>有点常识行吗</p>
+            </div>
+            <div class="comment-item-right-bottom">
+              <span>05-01 12:23</span> <span style="margin-left: 10px;">回复</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-bar"></div>
+    <div class="footer-bar">
+      <van-row gutter="10">
+        <van-col span="12">
+          <van-field v-model="inputValue" left-icon="edit" placeholder="写评论..." />
+        </van-col>
+        <van-col span="4" class="footer-bar-right">
+          <van-icon name="chat-o" info="3" />
+        </van-col>
+        <van-col span="4" class="footer-bar-right">
+          <van-icon name="star-o" />
+        </van-col>
+        <van-col span="4" class="footer-bar-right">
+          <van-icon name="share" />
+        </van-col>
+      </van-row>
+    </div>
   </div>
 </template>
 
@@ -59,7 +108,9 @@
   export default {
     name: "article-detail",
     data() {
-      return {}
+      return {
+        inputValue: ''
+      }
     },
     methods: {
       onClickLeft() {
@@ -74,51 +125,122 @@
 </script>
 
 <style lang="scss" scoped>
-.main-content {
-  padding: 0 10px;
-  margin-top: 60px;
-  border-bottom: 1px solid #ccc;
-  .news-title {
-    font-size: 20px;
+  .article-detail {
+    margin-bottom: 100px;
   }
-  .news-info {
-    display: flex;
-    margin-top: 30px;
-    .info-pic, .info-main, .info-status {
-      height: 50px;
+  .main {
+    margin: 0 10px;
+  }
+  .main-content {
+    margin: 60px 0 30px;
+    border-bottom: 1px solid #ccc;
+    .news-title {
+      font-size: 20px;
     }
-    .info-pic {
-      width: 50px;
-      border: 1px solid #333;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 100%;
+    .news-info {
+      display: flex;
+      margin-top: 30px;
+      .info-pic, .info-main, .info-status {
+        height: 50px;
+      }
+      .info-pic {
+        width: 50px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      .info-main {
+        flex: 1;
+        vertical-align: top;
+        margin: 0 10px;
+        h4 {
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+      .info-status {
+        width: 60px;
+        vertical-align: top;
       }
     }
-    .info-main {
-      flex: 1;
-      vertical-align: top;
-      margin: 0 10px;
-      h4 {
-        margin-bottom: 5px;
-      }
+    .news-content {
+      margin-top: 30px;
       p {
-        font-size: 12px;
-        color: #999;
+        font-size: 16px;
+        margin: 20px 0;
       }
     }
-    .info-status {
-      width: 60px;
-      vertical-align: top;
+  }
+  .main-comment {
+    .comment-item {
+      display: flex;
+      margin-bottom: 30px;
+      .comment-item-left {
+        height: 40px;
+        width: 40px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .comment-item-right {
+        flex: 1;
+        margin-left: 10px;
+        .comment-item-right-top {
+          display: flex;
+          margin-bottom: 10px;
+          font-size: 14px;
+          .user-name {
+            flex: 1;
+            color: #409eff;
+          }
+          .user-status {
+            width: 50px;
+            i {
+              margin-right: 4px;
+            }
+          }
+        }
+        .comment-item-right-content {
+          font-size: 16px;
+          margin-bottom: 4px;
+        }
+        .comment-item-right-bottom {
+          font-size: 12px;
+        }
+      }
     }
   }
-  .news-content {
-    margin-top: 30px;
-    p {
-      font-size: 16px;
-      margin: 20px 0;
+  .footer-bar {
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    padding: 0 0 0 5px;
+    .van-col {
+      height: 50px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .footer-bar-right {
+      font-size: 26px;
+      padding-top: 8px;
+      i {
+        vertical-align: middle;
+      }
+    }
+    .van-field {
+      background: #eee;
+      height: 40px;
+      border-radius: 20px;
+      margin-top: 5px;
     }
   }
-}
 </style>

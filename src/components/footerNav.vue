@@ -22,13 +22,13 @@
             url: '/home/index'
           },
           {
-            className: 'iconxiazai45',
+            className: 'iconxihuan',
             desc: '偏好',
             url: '/preference/index'
           },
           {
-            className: 'iconxiazai45',
-            desc: '首页3',
+            className: 'iconego-preference',
+            desc: '我的',
             url: '/c'
           }
         ],
