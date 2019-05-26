@@ -75,6 +75,18 @@ export default new Router({
           component: () => import('@/views/preference')
         }
       ]
+    },
+    {
+      path: '/my',
+      name: 'my',
+      component: Layout,
+      children: [
+        {
+          path: 'index',
+          name: 'myIndex',
+          component: () => import('@/views/my')
+        }
+      ]
     }
   ]
 })

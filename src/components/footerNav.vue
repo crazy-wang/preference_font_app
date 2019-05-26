@@ -29,7 +29,7 @@
           {
             className: 'iconego-preference',
             desc: '我的',
-            url: '/c'
+            url: '/my/index'
           }
         ],
         currentItem: '首页',
