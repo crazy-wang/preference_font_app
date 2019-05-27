@@ -5,13 +5,13 @@
 <template>
   <div class="lottery-hall">
     <!-- 用户信息 -->
-    <div class="user-info">
+    <div class="user-info" v-show="false">
       <p>
         <img src="./img/cc75798d0ec20b32.jpg" @click="toPage('/userInfo')" >
       </p>
       <p>
         <span>帐&nbsp;号: cds0715</span>
-        <span>昵&nbsp;称: 好嗨哦</span>
+        <span>昵&nbsp;称: 像风一样自由</span>
       </p>
       <i class="iconfont icon-shuaxin"></i>
     </div>
@@ -45,22 +45,22 @@
         <span>个人信息</span>
         <van-icon name="arrow" />
       </li>
-      <li @click="toPage('/safeCenter')">
+      <li @click="toPage('/focusGroup')">
         <i class="iconfont icon-anquanzhongxin"></i>
         <span>关注群体</span>
         <van-icon name="arrow" />
       </li>
-      <li @click="toPage('/agentCenter')">
+      <li @click="toPage('/activityManage')">
         <i class="iconfont icon-dailizhongxin"></i>
         <span>活动管理</span>
         <van-icon name="arrow" />
       </li>
-      <li @click="toPage('/todayProfitLoss')">
+      <li @click="toPage('/collection')">
         <i class="iconfont icon-yingkuitongji"></i>
         <span>总的收藏</span>
         <van-icon name="arrow" />
       </li>
-      <li @click="toPage('/myMessage')">
+      <li @click="toPage('/feedback')">
         <i class="iconfont icon-xiaoxi"></i>
         <span>反馈</span>
         <van-icon name="arrow" />
@@ -75,7 +75,7 @@
   export default {
     methods: {
       toPage (src) {
-        this.$router.push(src)
+        this.$router.push(`/my${src}`)
       }
     }
   }

@@ -85,6 +85,36 @@ export default new Router({
           path: 'index',
           name: 'myIndex',
           component: () => import('@/views/my')
+        },
+        {
+          path: 'userInfo',
+          name: 'userInfo',
+          component: () => import('@/views/my/components/userInfo')
+        },
+        {
+          path: 'focusGroup',
+          name: 'focusGroup',
+          component: () => import('@/views/my/components/focusGroup')
+        },
+        {
+          path: 'activityManage',
+          name: 'activityManage',
+          component: () => import('@/views/my/components/activityManage')
+        },
+        {
+          path: 'collection',
+          name: 'collection',
+          component: () => import('@/views/my/components/collection')
+        },
+        {
+          path: 'feedback',
+          name: 'feedback',
+          component: () => import('@/views/my/components/feedback')
+        },
+        {
+          path: 'bindPhone',
+          name: 'bindPhone',
+          component: () => import('@/views/my/components/bindPhone')
         }
       ]
     }
