@@ -115,6 +115,11 @@ export default new Router({
           path: 'bindPhone',
           name: 'bindPhone',
           component: () => import('@/views/my/components/bindPhone')
+        },
+        {
+          path: 'noData',
+          name: 'noData',
+          component: () => import('@/views/my/components/noDataPage')
         }
       ]
     }
